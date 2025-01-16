@@ -1,0 +1,2 @@
+Invoking command in '/home/jmj/voice_ws/build/mypkg': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(test) /usr/bin/cmake /home/jmj/voice_ws/mypkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/mypkg
+Invoked command in '/home/jmj/voice_ws/build/mypkg' returned '1': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(test) /usr/bin/cmake /home/jmj/voice_ws/mypkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/mypkg

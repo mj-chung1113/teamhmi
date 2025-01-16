@@ -1,0 +1,6 @@
+{
+  "package_name": "newpkg",
+  "non_idl_tuples": [
+    "/home/jmj/voice_ws/newpkg:msg/Mymsg.msg"
+  ]
+}

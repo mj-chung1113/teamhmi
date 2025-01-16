@@ -1,0 +1,49 @@
+/home/jmj/anaconda3/lib/python3.12/site-packages/setuptools/dist.py:452: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'script-dir' will not be supported in future
+        versions. Please use the underscore name 'script_dir' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+/home/jmj/anaconda3/lib/python3.12/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../build/my_voice/my_voice.egg-info/PKG-INFO
+writing dependency_links to ../build/my_voice/my_voice.egg-info/dependency_links.txt
+writing entry points to ../build/my_voice/my_voice.egg-info/entry_points.txt
+writing requirements to ../build/my_voice/my_voice.egg-info/requires.txt
+writing top-level names to ../build/my_voice/my_voice.egg-info/top_level.txt
+reading manifest file '../build/my_voice/my_voice.egg-info/SOURCES.txt'
+writing manifest file '../build/my_voice/my_voice.egg-info/SOURCES.txt'
+running build
+running build_py
+copying my_voice/button_pressed.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+copying my_voice/Sub.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+copying my_voice/stt_wake.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+copying my_voice/__init__.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+copying my_voice/playback.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+copying my_voice/tts.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+copying my_voice/Pub.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+running install
+running install_lib
+copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/stt.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/stt.py to stt.cpython-38.pyc
+running install_data
+copying resource/my_voice -> /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages
+copying package.xml -> /home/jmj/voice_ws/install/my_voice/share/my_voice
+running install_egg_info
+removing '/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/my_voice/my_voice.egg-info to /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice-0.0.0-py3.8.egg-info
+running install_scripts
+Installing Pub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+Installing Sub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+Installing stt script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+writing list of installed files to '/home/jmj/voice_ws/build/my_voice/install.log'

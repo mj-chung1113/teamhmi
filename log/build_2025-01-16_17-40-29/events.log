@@ -1,0 +1,81 @@
+[0.000000] (-) TimerEvent: {}
+[0.000089] (-) JobUnselected: {'identifier': 'my_voice'}
+[0.000105] (mypkg) JobQueued: {'identifier': 'mypkg', 'dependencies': OrderedDict()}
+[0.000484] (mypkg) JobStarted: {'identifier': 'mypkg'}
+[0.006086] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'cmake'}
+[0.006513] (mypkg) Command: {'cmd': ['/usr/bin/cmake', '/home/jmj/voice_ws/mypkg', '-DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/mypkg'], 'cwd': '/home/jmj/voice_ws/build/mypkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(test)'), ('LANGUAGE', 'en_US:en'), ('USER', 'jmj'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1327'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/jmj'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/jmj'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1225'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '24141'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jmj/voice_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jmj'), ('JOURNAL_STREAM', '8:49286'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CONDA_AUTO_ACTIVATE_BASE', 'false'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jmj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jmj/anaconda3/envs/test/bin:/home/jmj/anaconda3/envs/test/bin:/home/jmj/anaconda3/condabin:/home/jmj/anaconda3/envs/test/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jmj:@/tmp/.ICE-unix/1363,unix/jmj:/tmp/.ICE-unix/1363'), ('INVOCATION_ID', '89f66ee6bfd64d92bf72c48f3f3844d2'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/jmj/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:83dabb7e-436b-4fec-b3a4-7de45454b0bf'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'test'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jmj/voice_ws/build/mypkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/jmj/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages:/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('CONDA_PREFIX', '/home/jmj/anaconda3/envs/test'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy')]), 'shell': False}
+[0.015988] (mypkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.026725] (mypkg) StdoutLine: {'line': b'-- Found PythonInterp: /home/jmj/anaconda3/bin/python3 (found suitable version "3.12.7", minimum required is "3") \n'}
+[0.026801] (mypkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/jmj/anaconda3/bin/python3\n'}
+[0.099836] (-) TimerEvent: {}
+[0.134079] (mypkg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.150985] (mypkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.152833] (mypkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.199903] (-) TimerEvent: {}
+[0.210325] (mypkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.235371] (mypkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.236174] (mypkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.300016] (-) TimerEvent: {}
+[0.310200] (mypkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.360689] (mypkg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.376010] (mypkg) StdoutLine: {'line': b'-- Found PythonInterp: /home/jmj/anaconda3/bin/python3 (found version "3.12.7") \n'}
+[0.400085] (-) TimerEvent: {}
+[0.405186] (mypkg) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):\n'}
+[0.405274] (mypkg) StderrLine: {'line': b'  execute_process(/home/jmj/anaconda3/bin/python3 -m rosidl_adapter\n'}
+[0.405304] (mypkg) StderrLine: {'line': b'  --package-name mypkg --arguments-file\n'}
+[0.405331] (mypkg) StderrLine: {'line': b'  /home/jmj/voice_ws/build/mypkg/rosidl_adapter__arguments__mypkg.json\n'}
+[0.405357] (mypkg) StderrLine: {'line': b'  --output-dir /home/jmj/voice_ws/build/mypkg/rosidl_adapter/mypkg\n'}
+[0.405382] (mypkg) StderrLine: {'line': b'  --output-file /home/jmj/voice_ws/build/mypkg/rosidl_adapter/mypkg.idls)\n'}
+[0.405408] (mypkg) StderrLine: {'line': b'  returned error code 1:\n'}
+[0.405433] (mypkg) StderrLine: {'line': b'\n'}
+[0.405458] (mypkg) StderrLine: {'line': b"  AttributeError processing template 'msg.idl.em'\n"}
+[0.405483] (mypkg) StderrLine: {'line': b'\n'}
+[0.405508] (mypkg) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[0.405535] (mypkg) StderrLine: {'line': b'\n'}
+[0.405560] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 51, in evaluate_template\n'}
+[0.405587] (mypkg) StderrLine: {'line': b'      em.BUFFERED_OPT: True,\n'}
+[0.405612] (mypkg) StderrLine: {'line': b'      ^^^^^^^^^^^^^^^\n'}
+[0.405637] (mypkg) StderrLine: {'line': b'\n'}
+[0.405660] (mypkg) StderrLine: {'line': b"  AttributeError: module 'em' has no attribute 'BUFFERED_OPT'\n"}
+[0.405684] (mypkg) StderrLine: {'line': b'\n'}
+[0.405708] (mypkg) StderrLine: {'line': b'  \n'}
+[0.405732] (mypkg) StderrLine: {'line': b'\n'}
+[0.405757] (mypkg) StderrLine: {'line': b'  During handling of the above exception, another exception occurred:\n'}
+[0.405781] (mypkg) StderrLine: {'line': b'\n'}
+[0.405804] (mypkg) StderrLine: {'line': b'  \n'}
+[0.405828] (mypkg) StderrLine: {'line': b'\n'}
+[0.405852] (mypkg) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[0.405876] (mypkg) StderrLine: {'line': b'\n'}
+[0.405900] (mypkg) StderrLine: {'line': b'    File "<frozen runpy>", line 198, in _run_module_as_main\n'}
+[0.405923] (mypkg) StderrLine: {'line': b'    File "<frozen runpy>", line 88, in _run_code\n'}
+[0.405947] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[0.405972] (mypkg) StderrLine: {'line': b'      sys.exit(main())\n'}
+[0.405996] (mypkg) StderrLine: {'line': b'               ^^^^^^\n'}
+[0.406020] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[0.406045] (mypkg) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[0.406074] (mypkg) StderrLine: {'line': b'                     ^^^^^^^^^^^^^^^\n'}
+[0.406127] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl\n'}
+[0.406153] (mypkg) StderrLine: {'line': b'      return convert_msg_to_idl(\n'}
+[0.406178] (mypkg) StderrLine: {'line': b'             ^^^^^^^^^^^^^^^^^^^\n'}
+[0.406202] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 39, in convert_msg_to_idl\n'}
+[0.406227] (mypkg) StderrLine: {'line': b"      expand_template('msg.idl.em', data, output_file, encoding='iso-8859-1')\n"}
+[0.406252] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 23, in expand_template\n'}
+[0.406275] (mypkg) StderrLine: {'line': b'      content = evaluate_template(template_name, data)\n'}
+[0.406301] (mypkg) StderrLine: {'line': b'                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[0.406325] (mypkg) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 69, in evaluate_template\n'}
+[0.406349] (mypkg) StderrLine: {'line': b'      _interpreter.shutdown()\n'}
+[0.406373] (mypkg) StderrLine: {'line': b'      ^^^^^^^^^^^^^^^^^^^^^\n'}
+[0.406398] (mypkg) StderrLine: {'line': b'\n'}
+[0.406423] (mypkg) StderrLine: {'line': b"  AttributeError: 'NoneType' object has no attribute 'shutdown'\n"}
+[0.406448] (mypkg) StderrLine: {'line': b'\n'}
+[0.406472] (mypkg) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.406496] (mypkg) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.406523] (mypkg) StderrLine: {'line': b'  CMakeLists.txt:39 (rosidl_generate_interfaces)\n'}
+[0.406547] (mypkg) StderrLine: {'line': b'\n'}
+[0.406570] (mypkg) StderrLine: {'line': b'\n'}
+[0.406593] (mypkg) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.406622] (mypkg) StdoutLine: {'line': b'See also "/home/jmj/voice_ws/build/mypkg/CMakeFiles/CMakeOutput.log".\n'}
+[0.406648] (mypkg) StdoutLine: {'line': b'See also "/home/jmj/voice_ws/build/mypkg/CMakeFiles/CMakeError.log".\n'}
+[0.409340] (mypkg) CommandEnded: {'returncode': 1}
+[0.422334] (mypkg) JobEnded: {'identifier': 'mypkg', 'rc': 1}
+[0.432824] (-) EventReactorShutdown: {}

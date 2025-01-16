@@ -1,0 +1,56 @@
+[0.366s] Invoking command in '/home/jmj/voice_ws/src': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_voice build --build-base /home/jmj/voice_ws/build/my_voice/build install --record /home/jmj/voice_ws/build/my_voice/install.log --install-scripts $base/lib/my_voice --single-version-externally-managed install_data
+[0.447s] /home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/dist.py:452: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.447s] !!
+[0.447s] 
+[0.447s]         ********************************************************************************
+[0.447s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.447s]         versions. Please use the underscore name 'script_dir' instead.
+[0.447s] 
+[0.447s]         This deprecation is overdue, please update your project and remove deprecated
+[0.447s]         calls to avoid build errors in the future.
+[0.447s] 
+[0.447s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.447s]         ********************************************************************************
+[0.447s] 
+[0.447s] !!
+[0.447s]   opt = self.warn_dash_deprecation(opt, section)
+[0.453s] /home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[0.453s]   warnings.warn(msg)
+[0.488s] running egg_info
+[0.494s] writing ../build/my_voice/my_voice.egg-info/PKG-INFO
+[0.494s] writing dependency_links to ../build/my_voice/my_voice.egg-info/dependency_links.txt
+[0.494s] writing entry points to ../build/my_voice/my_voice.egg-info/entry_points.txt
+[0.494s] writing requirements to ../build/my_voice/my_voice.egg-info/requires.txt
+[0.494s] writing top-level names to ../build/my_voice/my_voice.egg-info/top_level.txt
+[0.541s] reading manifest file '../build/my_voice/my_voice.egg-info/SOURCES.txt'
+[0.541s] Traceback (most recent call last):
+[0.541s]   File "setup.py", line 5, in <module>
+[0.541s]     setup(
+[0.541s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/__init__.py", line 117, in setup
+[0.541s]     return distutils.core.setup(**attrs)
+[0.541s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 183, in setup
+[0.542s]     return run_commands(dist)
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 199, in run_commands
+[0.542s]     dist.run_commands()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+[0.542s]     self.run_command(cmd)
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/dist.py", line 950, in run_command
+[0.542s]     super().run_command(command)
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 973, in run_command
+[0.542s]     cmd_obj.run()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/command/egg_info.py", line 311, in run
+[0.542s]     self.find_sources()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/command/egg_info.py", line 319, in find_sources
+[0.542s]     mm.run()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/command/egg_info.py", line 545, in run
+[0.542s]     self.prune_file_list()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/command/sdist.py", line 161, in prune_file_list
+[0.542s]     super().prune_file_list()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_distutils/command/sdist.py", line 380, in prune_file_list
+[0.542s]     base_dir = self.distribution.get_fullname()
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_core_metadata.py", line 267, in get_fullname
+[0.542s]     return _distribution_fullname(self.get_name(), self.get_version())
+[0.542s]   File "/home/jmj/anaconda3/envs/test/lib/python3.8/site-packages/setuptools/_core_metadata.py", line 285, in _distribution_fullname
+[0.542s]     canonicalize_version(version, strip_trailing_zero=False),
+[0.542s] TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
+[0.556s] Invoked command in '/home/jmj/voice_ws/src' returned '1': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_voice build --build-base /home/jmj/voice_ws/build/my_voice/build install --record /home/jmj/voice_ws/build/my_voice/install.log --install-scripts $base/lib/my_voice --single-version-externally-managed install_data

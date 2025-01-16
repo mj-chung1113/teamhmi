@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <!-- 1. 패키지 정보 -->
+  <name>mypkg</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="jmj8521@gmail.com">jmj</maintainer>
+  <license>TODO: License declaration</license>
+
+  <!-- 2. 빌드 도구 및 의존성 설정 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 3. 의존성 설정 -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  
+  <!-- 4. 빌드 의존성 -->
+  <build_depend>rosidl_default_generators</build_depend>
+
+  <!-- 5. 실행 의존성 -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- 6. 테스트 관련 설정 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- 7. 기타 설정 (선택적) -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+  <!-- 8. 그룹 관련 설정 (선택적) -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+</package>

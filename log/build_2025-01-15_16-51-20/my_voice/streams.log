@@ -1,0 +1,20 @@
+[0.277s] Invoking command in '/home/jmj/voice_ws/build/my_voice': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jmj/voice_ws/build/my_voice/build --no-deps symlink_data --force
+[0.378s] running develop
+[0.427s] running egg_info
+[0.427s] writing my_voice.egg-info/PKG-INFO
+[0.428s] writing dependency_links to my_voice.egg-info/dependency_links.txt
+[0.428s] writing entry points to my_voice.egg-info/entry_points.txt
+[0.428s] writing requirements to my_voice.egg-info/requires.txt
+[0.428s] writing top-level names to my_voice.egg-info/top_level.txt
+[0.443s] reading manifest file 'my_voice.egg-info/SOURCES.txt'
+[0.444s] writing manifest file 'my_voice.egg-info/SOURCES.txt'
+[0.459s] running build_ext
+[0.459s] Creating /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my-voice.egg-link (link to .)
+[0.460s] Installing Pub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.460s] Installing Sub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.460s] 
+[0.460s] Installed /home/jmj/voice_ws/build/my_voice
+[0.460s] running symlink_data
+[0.460s] symbolically linking /home/jmj/voice_ws/build/my_voice/resource/my_voice -> /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages
+[0.460s] symbolically linking /home/jmj/voice_ws/build/my_voice/package.xml -> /home/jmj/voice_ws/install/my_voice/share/my_voice
+[0.473s] Invoked command in '/home/jmj/voice_ws/build/my_voice' returned '0': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jmj/voice_ws/build/my_voice/build --no-deps symlink_data --force

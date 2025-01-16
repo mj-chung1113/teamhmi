@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000280] (-) JobUnselected: {'identifier': 'my_voice'}
+[0.000302] (mypkg) JobQueued: {'identifier': 'mypkg', 'dependencies': OrderedDict()}
+[0.000314] (mypkg) JobStarted: {'identifier': 'mypkg'}
+[0.013931] (mypkg) JobEnded: {'identifier': 'mypkg', 'rc': 1}
+[0.024121] (-) EventReactorShutdown: {}

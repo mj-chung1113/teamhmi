@@ -1,10 +1,18 @@
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/button_pressed.py
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/Sub.py
-/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/from gtts import gTTS.py
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/stt_wake.py
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__init__.py
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/stt.py
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/playback.py
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/tts.py
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/Pub.py
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/button_pressed.cpython-38.pyc
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/Sub.cpython-38.pyc
-/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/from gtts import gTTS.cpython-38.pyc
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/stt_wake.cpython-38.pyc
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/__init__.cpython-38.pyc
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/stt.cpython-38.pyc
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/playback.cpython-38.pyc
+/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/tts.cpython-38.pyc
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__pycache__/Pub.cpython-38.pyc
 /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages/my_voice
 /home/jmj/voice_ws/install/my_voice/share/my_voice/package.xml
@@ -17,3 +25,4 @@
 /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice-0.0.0-py3.8.egg-info/entry_points.txt
 /home/jmj/voice_ws/install/my_voice/lib/my_voice/Pub
 /home/jmj/voice_ws/install/my_voice/lib/my_voice/Sub
+/home/jmj/voice_ws/install/my_voice/lib/my_voice/stt

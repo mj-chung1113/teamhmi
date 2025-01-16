@@ -1,0 +1,43 @@
+[0.280s] Invoking command in '/home/jmj/voice_ws/build/my_voice': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jmj/voice_ws/build/my_voice/build
+[0.379s] running develop
+[0.427s] Removing /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my-voice.egg-link (link to .)
+[0.438s] Invoked command in '/home/jmj/voice_ws/build/my_voice' returned '0': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jmj/voice_ws/build/my_voice/build
+[0.439s] Invoking command in '/home/jmj/voice_ws/src/my_voice': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_voice build --build-base /home/jmj/voice_ws/build/my_voice/build install --record /home/jmj/voice_ws/build/my_voice/install.log --install-scripts $base/lib/my_voice --single-version-externally-managed install_data --force
+[0.533s] running egg_info
+[0.533s] writing ../../build/my_voice/my_voice.egg-info/PKG-INFO
+[0.533s] writing dependency_links to ../../build/my_voice/my_voice.egg-info/dependency_links.txt
+[0.534s] writing entry points to ../../build/my_voice/my_voice.egg-info/entry_points.txt
+[0.534s] writing requirements to ../../build/my_voice/my_voice.egg-info/requires.txt
+[0.534s] writing top-level names to ../../build/my_voice/my_voice.egg-info/top_level.txt
+[0.550s] reading manifest file '../../build/my_voice/my_voice.egg-info/SOURCES.txt'
+[0.551s] writing manifest file '../../build/my_voice/my_voice.egg-info/SOURCES.txt'
+[0.551s] running build
+[0.551s] running build_py
+[0.551s] running install
+[0.551s] running install_lib
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/button_pressed.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/Sub.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/stt_wake.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/__init__.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/stt.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/playback.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/tts.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/Pub.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.552s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/button_pressed.py to button_pressed.cpython-38.pyc
+[0.553s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/Sub.py to Sub.cpython-38.pyc
+[0.553s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/stt_wake.py to stt_wake.cpython-38.pyc
+[0.553s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/__init__.py to __init__.cpython-38.pyc
+[0.553s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/stt.py to stt.cpython-38.pyc
+[0.554s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/playback.py to playback.cpython-38.pyc
+[0.554s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/tts.py to tts.cpython-38.pyc
+[0.555s] byte-compiling /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice/Pub.py to Pub.cpython-38.pyc
+[0.555s] running install_data
+[0.555s] copying resource/my_voice -> /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages
+[0.555s] copying package.xml -> /home/jmj/voice_ws/install/my_voice/share/my_voice
+[0.555s] running install_egg_info
+[0.556s] Copying ../../build/my_voice/my_voice.egg-info to /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice-0.0.0-py3.8.egg-info
+[0.556s] running install_scripts
+[0.565s] Installing Pub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.565s] Installing Sub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.565s] writing list of installed files to '/home/jmj/voice_ws/build/my_voice/install.log'
+[0.576s] Invoked command in '/home/jmj/voice_ws/src/my_voice' returned '0': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_voice build --build-base /home/jmj/voice_ws/build/my_voice/build install --record /home/jmj/voice_ws/build/my_voice/install.log --install-scripts $base/lib/my_voice --single-version-externally-managed install_data --force

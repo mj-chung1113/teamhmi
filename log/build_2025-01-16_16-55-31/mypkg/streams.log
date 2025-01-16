@@ -1,0 +1,30 @@
+[0.006s] Invoking command in '/home/jmj/voice_ws/build/mypkg': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(test) /usr/bin/cmake /home/jmj/voice_ws/mypkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/mypkg
+[0.014s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.024s] -- Using PYTHON_EXECUTABLE: /home/jmj/anaconda3/bin/python3
+[0.116s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.133s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.135s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.197s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.222s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.223s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.297s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.310s] Traceback (most recent call last):
+[0.310s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 21, in <module>
+[0.310s]     from catkin_pkg.package import parse_package_string
+[0.310s] ModuleNotFoundError: No module named 'catkin_pkg'
+[0.312s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):
+[0.312s]   execute_process(/home/jmj/anaconda3/bin/python3
+[0.312s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.312s]   /home/jmj/voice_ws/mypkg/package.xml
+[0.312s]   /home/jmj/voice_ws/build/mypkg/ament_cmake_core/package.cmake) returned
+[0.312s]   error code 1
+[0.312s] Call Stack (most recent call first):
+[0.312s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.312s]   /opt/ros/foxy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.312s]   CMakeLists.txt:33 (ament_lint_auto_find_test_dependencies)
+[0.312s] 
+[0.312s] 
+[0.313s] -- Configuring incomplete, errors occurred!
+[0.313s] See also "/home/jmj/voice_ws/build/mypkg/CMakeFiles/CMakeOutput.log".
+[0.313s] See also "/home/jmj/voice_ws/build/mypkg/CMakeFiles/CMakeError.log".
+[0.317s] Invoked command in '/home/jmj/voice_ws/build/mypkg' returned '1': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(test) /usr/bin/cmake /home/jmj/voice_ws/mypkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/mypkg

@@ -1,4 +1,4 @@
 [console_scripts]
 Pub = my_voice.Pub:main
 Sub = my_voice.Sub:main
-
+stt = my_voice.stt:main

@@ -1,0 +1,65 @@
+[0.107s] Invoking command in '/home/jmj/voice_ws/build/newpkg': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(test) /usr/bin/cmake /home/jmj/voice_ws/newpkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/newpkg
+[0.115s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.125s] -- Found PythonInterp: /home/jmj/anaconda3/bin/python3 (found suitable version "3.12.7", minimum required is "3") 
+[0.125s] -- Using PYTHON_EXECUTABLE: /home/jmj/anaconda3/bin/python3
+[0.220s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.221s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.223s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.297s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.319s] -- Found PythonInterp: /home/jmj/anaconda3/bin/python3 (found version "3.12.7") 
+[0.346s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[0.346s]   execute_process(/home/jmj/anaconda3/bin/python3 -m rosidl_adapter
+[0.346s]   --package-name newpkg --arguments-file
+[0.346s]   /home/jmj/voice_ws/build/newpkg/rosidl_adapter__arguments__newpkg.json
+[0.346s]   --output-dir /home/jmj/voice_ws/build/newpkg/rosidl_adapter/newpkg
+[0.346s]   --output-file /home/jmj/voice_ws/build/newpkg/rosidl_adapter/newpkg.idls)
+[0.346s]   returned error code 1:
+[0.346s] 
+[0.346s]   AttributeError processing template 'msg.idl.em'
+[0.346s] 
+[0.346s]   Traceback (most recent call last):
+[0.346s] 
+[0.346s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 48, in evaluate_template
+[0.346s]       _interpreter = em.Interpreter(
+[0.346s]                      ^^^^^^^^^^^^^^
+[0.346s] 
+[0.346s]   AttributeError: module 'em' has no attribute 'Interpreter'
+[0.346s] 
+[0.346s]   
+[0.346s] 
+[0.346s]   During handling of the above exception, another exception occurred:
+[0.346s] 
+[0.346s]   
+[0.346s] 
+[0.346s]   Traceback (most recent call last):
+[0.346s] 
+[0.346s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[0.347s]     File "<frozen runpy>", line 88, in _run_code
+[0.347s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.347s]       sys.exit(main())
+[0.347s]                ^^^^^^
+[0.347s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.347s]       abs_idl_file = convert_to_idl(
+[0.347s]                      ^^^^^^^^^^^^^^^
+[0.347s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.347s]       return convert_msg_to_idl(
+[0.347s]              ^^^^^^^^^^^^^^^^^^^
+[0.347s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 39, in convert_msg_to_idl
+[0.347s]       expand_template('msg.idl.em', data, output_file, encoding='iso-8859-1')
+[0.347s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 23, in expand_template
+[0.347s]       content = evaluate_template(template_name, data)
+[0.347s]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0.347s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 69, in evaluate_template
+[0.347s]       _interpreter.shutdown()
+[0.347s]       ^^^^^^^^^^^^^^^^^^^^^
+[0.347s] 
+[0.347s]   AttributeError: 'NoneType' object has no attribute 'shutdown'
+[0.347s] 
+[0.347s] Call Stack (most recent call first):
+[0.347s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.347s]   CMakeLists.txt:25 (rosidl_generate_interfaces)
+[0.347s] 
+[0.347s] 
+[0.347s] -- Configuring incomplete, errors occurred!
+[0.347s] See also "/home/jmj/voice_ws/build/newpkg/CMakeFiles/CMakeOutput.log".
+[0.350s] Invoked command in '/home/jmj/voice_ws/build/newpkg' returned '1': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(test) /usr/bin/cmake /home/jmj/voice_ws/newpkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/newpkg

@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing my_voice.egg-info/PKG-INFO
+writing dependency_links to my_voice.egg-info/dependency_links.txt
+writing entry points to my_voice.egg-info/entry_points.txt
+writing requirements to my_voice.egg-info/requires.txt
+writing top-level names to my_voice.egg-info/top_level.txt
+reading manifest file 'my_voice.egg-info/SOURCES.txt'
+writing manifest file 'my_voice.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my-voice.egg-link (link to .)
+Installing Pub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+Installing Sub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+
+Installed /home/jmj/voice_ws/build/my_voice
+running symlink_data
+symbolically linking /home/jmj/voice_ws/build/my_voice/resource/my_voice -> /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages
+symbolically linking /home/jmj/voice_ws/build/my_voice/package.xml -> /home/jmj/voice_ws/install/my_voice/share/my_voice

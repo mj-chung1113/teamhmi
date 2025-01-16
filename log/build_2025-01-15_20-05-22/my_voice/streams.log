@@ -1,0 +1,38 @@
+[0.500s] Invoking command in '/home/jmj/voice_ws/build/my_voice': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jmj/voice_ws/build/my_voice/build --no-deps symlink_data --force
+[0.583s] /home/jmj/anaconda3/lib/python3.12/site-packages/setuptools/dist.py:452: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.583s] !!
+[0.583s] 
+[0.583s]         ********************************************************************************
+[0.583s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.583s]         versions. Please use the underscore name 'script_dir' instead.
+[0.583s] 
+[0.583s]         This deprecation is overdue, please update your project and remove deprecated
+[0.583s]         calls to avoid build errors in the future.
+[0.583s] 
+[0.583s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.583s]         ********************************************************************************
+[0.583s] 
+[0.583s] !!
+[0.583s]   opt = self.warn_dash_deprecation(opt, section)
+[0.597s] /home/jmj/anaconda3/lib/python3.12/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[0.597s]   warnings.warn(msg)
+[0.711s] running develop
+[0.854s] running egg_info
+[0.868s] writing my_voice.egg-info/PKG-INFO
+[0.868s] writing dependency_links to my_voice.egg-info/dependency_links.txt
+[0.869s] writing entry points to my_voice.egg-info/entry_points.txt
+[0.869s] writing requirements to my_voice.egg-info/requires.txt
+[0.869s] writing top-level names to my_voice.egg-info/top_level.txt
+[0.901s] reading manifest file 'my_voice.egg-info/SOURCES.txt'
+[0.902s] writing manifest file 'my_voice.egg-info/SOURCES.txt'
+[0.933s] running build_ext
+[0.933s] Creating /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my-voice.egg-link (link to .)
+[0.934s] Installing Pub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.934s] Installing Sub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.934s] Installing stt script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.934s] 
+[0.934s] Installed /home/jmj/voice_ws/build/my_voice
+[0.934s] running symlink_data
+[0.934s] symbolically linking /home/jmj/voice_ws/build/my_voice/resource/my_voice -> /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages
+[0.934s] symbolically linking /home/jmj/voice_ws/build/my_voice/package.xml -> /home/jmj/voice_ws/install/my_voice/share/my_voice
+[0.951s] Invoked command in '/home/jmj/voice_ws/build/my_voice' returned '0': CONDA_PROMPT_MODIFIER=(test) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jmj/voice_ws/build/my_voice/build --no-deps symlink_data --force

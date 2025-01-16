@@ -1,0 +1,50 @@
+[0.497s] Invoking command in '/home/jmj/voice_ws/src': CONDA_PROMPT_MODIFIER=(voice) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_voice build --build-base /home/jmj/voice_ws/build/my_voice/build install --record /home/jmj/voice_ws/build/my_voice/install.log --install-scripts $base/lib/my_voice --single-version-externally-managed install_data
+[0.579s] /home/jmj/anaconda3/lib/python3.12/site-packages/setuptools/dist.py:452: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[0.579s] !!
+[0.579s] 
+[0.579s]         ********************************************************************************
+[0.579s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.579s]         versions. Please use the underscore name 'script_dir' instead.
+[0.579s] 
+[0.579s]         This deprecation is overdue, please update your project and remove deprecated
+[0.579s]         calls to avoid build errors in the future.
+[0.579s] 
+[0.579s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[0.579s]         ********************************************************************************
+[0.579s] 
+[0.579s] !!
+[0.579s]   opt = self.warn_dash_deprecation(opt, section)
+[0.592s] /home/jmj/anaconda3/lib/python3.12/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[0.592s]   warnings.warn(msg)
+[0.675s] running egg_info
+[0.689s] writing ../build/my_voice/my_voice.egg-info/PKG-INFO
+[0.689s] writing dependency_links to ../build/my_voice/my_voice.egg-info/dependency_links.txt
+[0.689s] writing entry points to ../build/my_voice/my_voice.egg-info/entry_points.txt
+[0.689s] writing requirements to ../build/my_voice/my_voice.egg-info/requires.txt
+[0.689s] writing top-level names to ../build/my_voice/my_voice.egg-info/top_level.txt
+[0.769s] reading manifest file '../build/my_voice/my_voice.egg-info/SOURCES.txt'
+[0.770s] writing manifest file '../build/my_voice/my_voice.egg-info/SOURCES.txt'
+[0.770s] running build
+[0.770s] running build_py
+[0.770s] copying my_voice/button_pressed.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.770s] copying my_voice/Sub.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.770s] copying my_voice/stt_wake.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.770s] copying my_voice/__init__.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.771s] copying my_voice/playback.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.771s] copying my_voice/tts.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.771s] copying my_voice/Pub.py -> /home/jmj/voice_ws/build/my_voice/build/lib/my_voice
+[0.771s] running install
+[0.773s] running install_lib
+[0.787s] copying /home/jmj/voice_ws/build/my_voice/build/lib/my_voice/stt.py -> /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice
+[0.787s] running install_data
+[0.787s] copying resource/my_voice -> /home/jmj/voice_ws/install/my_voice/share/ament_index/resource_index/packages
+[0.788s] copying package.xml -> /home/jmj/voice_ws/install/my_voice/share/my_voice
+[0.788s] running install_egg_info
+[0.802s] removing '/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice-0.0.0-py3.8.egg-info' (and everything under it)
+[0.802s] Copying ../build/my_voice/my_voice.egg-info to /home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages/my_voice-0.0.0-py3.8.egg-info
+[0.802s] running install_scripts
+[0.833s] Installing Pub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.833s] Installing Sub script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.833s] Installing stt script to /home/jmj/voice_ws/install/my_voice/lib/my_voice
+[0.833s] writing list of installed files to '/home/jmj/voice_ws/build/my_voice/install.log'
+[0.846s] Invoked command in '/home/jmj/voice_ws/src' returned '0': CONDA_PROMPT_MODIFIER=(voice) PYTHONPATH=/home/jmj/voice_ws/build/my_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jmj/voice_ws/install/my_voice/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_voice build --build-base /home/jmj/voice_ws/build/my_voice/build install --record /home/jmj/voice_ws/build/my_voice/install.log --install-scripts $base/lib/my_voice --single-version-externally-managed install_data

@@ -1,0 +1,18 @@
+[0.005s] Invoking command in '/home/jmj/voice_ws/build/newpkg': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy /usr/bin/cmake /home/jmj/voice_ws/newpkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/newpkg
+[0.015s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.025s] -- Found PythonInterp: /home/jmj/anaconda3/bin/python3 (found suitable version "3.12.7", minimum required is "3") 
+[0.025s] -- Using PYTHON_EXECUTABLE: /home/jmj/anaconda3/bin/python3
+[0.120s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.120s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.122s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.192s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.204s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.204s]   rosidl_generate_interfaces() the passed file 'msg/mymsg.msg' doesn't exist
+[0.204s]   relative to the CMAKE_CURRENT_SOURCE_DIR '/home/jmj/voice_ws/newpkg'
+[0.204s] Call Stack (most recent call first):
+[0.204s]   CMakeLists.txt:25 (rosidl_generate_interfaces)
+[0.204s] 
+[0.204s] 
+[0.204s] -- Configuring incomplete, errors occurred!
+[0.204s] See also "/home/jmj/voice_ws/build/newpkg/CMakeFiles/CMakeOutput.log".
+[0.207s] Invoked command in '/home/jmj/voice_ws/build/newpkg' returned '1': CMAKE_PREFIX_PATH=/home/jmj/voice_ws/install/my_voice:/opt/ros/foxy /usr/bin/cmake /home/jmj/voice_ws/newpkg -DCMAKE_INSTALL_PREFIX=/home/jmj/voice_ws/install/newpkg
