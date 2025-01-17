@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Bool, Int16, Float32, UInt8MultiArray,UInt8
+from std_msgs.msg import Bool, Float32, UInt8MultiArray,UInt8
 import pyaudio
 import pvrhino
 import webrtcvad
@@ -11,11 +11,11 @@ class VoiceRecognitionNode(Node):
         super().__init__('voice_recognition_node')
 
         # SUB
-        self.create_subscription(Bool, '/button_state', self.button_callback, 10)
-        self.create_subscription(UInt8, '/state', self.drivingstate_callback, 10)
+        self.create_subscription(Bool, '/talkbutton_state', self.talkbutton_callback, 10)
+        self.create_subscription(UInt8, '/driving_state', self.drivingstate_callback, 10)
         
         # PUB
-        self.dst_publisher = self.create_publisher(Int16, '/dst', 10)
+        self.dst_publisher = self.create_publisher(UInt8, '/dst', 10)
 
         # Variables for button state and recording
         self.talkbutton_pressed = False
@@ -42,7 +42,8 @@ class VoiceRecognitionNode(Node):
             None: 0,
             "goal" : 1, 
             "replanning" : 2,
-            "stop" : 3
+            "stop" : 3,
+            "question" : 4,
         } 
         self.slot_to_value = {
                 None: 0,
@@ -62,7 +63,7 @@ class VoiceRecognitionNode(Node):
 
         self.get_logger().info("Voice Recognition Node Initialized")
 
-    def button_callback(self, msg: Bool):
+    def talkbutton_callback(self, msg: Bool):
         self.talkbutton_pressed = msg.data
         if self.talkbutton_pressed and not self.recording:
             self.start_recording()
@@ -107,7 +108,7 @@ class VoiceRecognitionNode(Node):
             else:
                 self.silence_count += 1
 
-            # Check for silence or button release
+            # Check for silence or button release # 사일런스 길면 말씀하여주세요 로직 추가 필 
             if self.silence_count > self.silence_frames or not self.talkbutton_pressed:
                 self.get_logger().info("Silence detected or button released.")
                 self.stop_recording()
@@ -117,19 +118,30 @@ class VoiceRecognitionNode(Node):
     def process_intent(self, audio_buffer):
         # Convert audio to Rhino-compatible format
         audio_samples = np.frombuffer(audio_buffer, dtype=np.int16).tolist()
-        is_finalized = self.rhino.process(audio_samples)
-        if is_finalized: #추출 완료 시 
-            inference = self.rhino.get_inference() #추출된 결과 객체 
-            if inference.is_understood(): #추출된 결과 이해함
-                if inference.intent is not None:
-                    self.get_logger().info(f"Intent Detected: {inference.intent}, slots: {inference.slots}")
-                    self.shoot_intent(inference.intent, inference.slots)
-                else: #intent 없음
-                    self.get_logger().info("understood, No intent detected")
+
+        # Rhino의 프레임 크기(512)에 맞게 데이터 분할
+        frame_length = self.rhino.frame_length
+        for i in range(0, len(audio_samples), frame_length):
+            audio_frame = audio_samples[i:i + frame_length]
+            
+            # 프레임 크기가 부족하면 무시
+            if len(audio_frame) < frame_length:
+                break
+            
+            # Rhino에 프레임 처리 요청
+            is_finalized = self.rhino.process(audio_frame)
+            if is_finalized:  # 추출 완료 시
+                inference = self.rhino.get_inference()  # 추출된 결과 객체
+                if inference.is_understood():  # 추출된 결과 이해함
+                    if inference.intent is not None:
+                        self.get_logger().info(f"Intent Detected: {inference.intent}, slots: {inference.slots}")
+                        self.shoot_intent(inference.intent, inference.slots)
+                    else:  # intent 없음
+                        self.get_logger().info("understood, No intent detected")
+                        self.shoot_intent(None, None)
+                else:
+                    self.get_logger().info("dont understand")
                     self.shoot_intent(None, None)
-            else: 
-                self.get_logger().info("dont understand")
-                self.shoot_intent(None, None)
         # Cleanup
         self.rhino.delete()
         self.audio.terminate()
@@ -138,10 +150,10 @@ class VoiceRecognitionNode(Node):
     def shoot_intent(self,intents, slots):
         intent_value = self.intent_to_value.get(intents)
         slot_value = self.slot_to_value.get(slots)
-
         if intent_value is not None and slot_value is not None:
             self.dst_publisher.publish(UInt8MultiArray(data=[intent_value, slot_value]))
-        
+            self.get_logger().info(f"Intent: {intents}, Slot: {slots} published")
+            
 
 def main(args=None):
     rclpy.init(args=args)

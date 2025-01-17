@@ -23,6 +23,7 @@ setup(
             'Pub = my_voice.Pub:main',
             'Sub = my_voice.Sub:main',
             'stt = my_voice.stt:main',
+            'button_pressed = my_voice.button_pressed:main',
         ],
     },
 )
