@@ -108,7 +108,7 @@ class VoiceRecognitionNode(Node):
             else:
                 self.silence_count += 1
 
-            # Check for silence or button release
+            # Check for silence or button release # 사일런스 길면 말씀하여주세요 로직 추가 필 
             if self.silence_count > self.silence_frames or not self.talkbutton_pressed:
                 self.get_logger().info("Silence detected or button released.")
                 self.stop_recording()
@@ -132,7 +132,7 @@ class VoiceRecognitionNode(Node):
             is_finalized = self.rhino.process(audio_frame)
             if is_finalized:  # 추출 완료 시
                 inference = self.rhino.get_inference()  # 추출된 결과 객체
-                if inference.is_understood():  # 추출된 결과 이해함
+                if inference.is_understood:  # 추출된 결과 이해함
                     if inference.intent is not None:
                         self.get_logger().info(f"Intent Detected: {inference.intent}, slots: {inference.slots}")
                         self.shoot_intent(inference.intent, inference.slots)
