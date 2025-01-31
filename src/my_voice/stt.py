@@ -12,18 +12,18 @@ class VoiceRecognitionNode(Node):
 
         # SUB
         self.create_subscription(Bool, '/talkbutton_state', self.talkbutton_callback, 10)
-        self.create_subscription(UInt8, '/driving_state', self.drivingstate_callback, 10)
+        self.create_subscription(UInt8, '/driving_status', self.status_callback, 10)
         
         # PUB
         self.intents_publisher = self.create_publisher(UInt8, '/intents', 10)
-        self.dst_publisher = self.create_publisher(UInt8, '/dst', 10)
+        self.fin_goal_publisher = self.create_publisher(UInt8, '/fin_goal', 10)
 
         # Variables for button state and recording
         self.talkbutton_pressed = False
         self.recording = False
 
         # state variables
-        self.driving_state = 0
+        self.driving_status = 0
 
         # PyAudio and WebRTC VAD setup
         self.audio = pyaudio.PyAudio()
@@ -71,9 +71,11 @@ class VoiceRecognitionNode(Node):
         elif not self.talkbutton_pressed and self.recording:
             self.stop_recording()
     
-    def drivingstate_callback(self, msg: UInt8):
-        self.driving_state = msg.data
-        
+    def status_callback(self, msg):
+        """주행 상태 업데이트"""
+        self.driving_status = msg.data
+        self.get_logger().info(f"Updated driving status to: {self.driving_status}")
+
     def start_recording(self):
         self.get_logger().info("Button pressed, starting recording...")
         self.recording = True
@@ -162,7 +164,7 @@ class VoiceRecognitionNode(Node):
         slot_value = self.get_slot_value(slots)
 
         self.intents_publisher.publish(intent_value)
-        self.dst_publisher.publish(slot_value)
+        self.fin_goal_publisher.publish(slot_value)
         self.get_logger().info(f"Intent: {intents}, Slot: {slots} published")
             
 def main(args=None):

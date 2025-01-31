@@ -1,11 +1,13 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import UInt8, String, Bool
+from std_msgs.msg import UInt8, String, Bool,Float32
 from gtts import gTTS
 import playsound
 import threading
 from collections import deque
 import time
+
+
 
 class TTS(Node):
     def __init__(self):
@@ -23,12 +25,13 @@ class TTS(Node):
         self.meter_to_node = 0
         self.meter_to_dst = 0
         self.hmi_stop = False 
+        self.intents = 0
         # 딕셔너리: 상태별 출력 문구
         self.output_text = {
             0: ', 이해하지 못했습니다. 다시 말씀해주시겠어요?',
             1: ', 안내사항',
             2: ', 버튼을 누르고 목적지를 말씀해주세요',
-            3: f', 목적지를 { self.fin_goal }로 설정할까요?',
+            3: f', 목적지를 { self.fin_goal }로 설정할까요? 맞으면 상호작용 버튼을 한 번, 아니면 두 번 눌러주세요.',
             4: f', 안내 서비스를 시작합니다. 예상 소요 시간은 약 {self.meter_to_dst/self.speed/60  }분 입니다.',
             5: ', 목적지 변경, 현재 위치 확인, 정지, 중 말씀해주세요',
             6: f' 현재 위치는 {self.next_node} 의 { self.meter_to_node} 미터 앞 입니다.',
@@ -57,24 +60,58 @@ class TTS(Node):
         self.stop_playing = threading.Event()  # 음성을 중단하는 이벤트
 
         # 구독자 설정
-        self.create_subscription(UInt8, '/driving_status', self.status_callback, 10)
-        self.create_subscription(Bool, '/obstacle_warning', self.obstacle_callback, 10)
-        self.create_subscription(String, '/handle_status', self.handle_callback, 10)
-        self.create_subscription(UInt8, '/speed_change', self.speed_callback, 10)
-        self.create_subscription(String, '/current_position', self.position_callback, 10)
-        self.create_subscription(String, '/meter_to_node', self.next_node_callback, 10)
-        self.create_subscription(String, '/meter_to_dst', self.meter_to_dst_callback, 10)
-        self.create_subscription(String, '/final_goal', self.final_goal_callback, 10)
+        self.create_subscription(UInt8, '/driving_status', self.status_callback, 10) #주행 상태, 0:주행 전, 1:주행 중, 2: 정차, 3: 주차 
+        self.create_subscription(Bool, '/obstacle_warning', self.obstacle_callback, 10) #장애물 감지, T : 동적 장애물, F: 정적 장애물
+        self.create_subscription(UInt8, '/handle_status', self.handle_callback, 10) #손잡이 상태, 0:둘 다 떨어짐 1:하나만 잡힘 2:둘 다 잡힘
+        self.create_subscription(UInt8, '/speed_change', self.speed_callback, 10) #속도(기어) 변경, -1 : 저속, 0: 중속, 1: 고속
+        self.create_subscription(String, '/current_position', self.position_callback, 10) #현재위치, 노드이름
+        self.create_subscription(Float32, '/meter_to_node', self.next_node_callback, 10) #다음 노드까지 거리, 미터
+        self.create_subscription(Float32, '/meter_to_dst', self.meter_to_dst_callback, 10) #목적지까지 거리, 미터
+        self.create_subscription(UInt8, '/intents', self.intents_callback, 10) #목적지 설정, 0:미설정, 1:후문, 2:학생회관, 3:새천년관, 4:신공학관, 5:공학관
+        self.create_subscription(UInt8, '/fin_goal', self.fin_goal_callback, 10) 
         self.create_subscription(Bool, '/emergency_stop', self.emergency_stop_callback, 10)
         self.create_subscription(Bool, '/talkbutton_state', self.talkbutton_callback, 10)
         self.hmi_stop_pub = self.create_publisher(Bool, '/hmi_stop', 10)
         
+        self.intents_dict = {
+            0 : None,
+            1 : "goal", 
+            2 : "replanning",
+            3 : "stop",
+            4 : "question"
+        } 
+        self.slot_dict = {
+            0: None,
+            1: "후문",
+            2 :"학생회관",
+            3: "새천년관",
+            4: "신공학관",
+            5: "공학관",
+        }
+  
+    def intents_callback(self, msg):
+        self.intents = msg.data
+        if self.intents == 0:
+            self.request_queue.append(self.output_text[0])
+        elif self.intents == 1:
+            self.request_queue.append(self.output_text[3])
+        elif self.intents == 2:
+            self.request_queue.append(self.output_text[2])
+        elif self.intents == 3:
+            self.request_queue.append(self.output_text[11])
+        elif self.intents == 4:
+            self.request_queue.append(self.output_text[5])
+        
 
-    def final_goal_callback(self, msg):
+
+    def fin_goal_callback(self, msg):
         """최종 목적지 업데이트"""
-        self.fin_goal = msg.data
+        self.fin_goal = self.slot_dict[msg.data]
         self.get_logger().info(f"Final goal updated to: {self.fin_goal}")
-        self.request_queue.append(self.output_text[3])
+        if self.fin_goal == None:
+            self.request_queue.append(self.output_text[0])
+        else: 
+            self.request_queue.append(self.output_text[3])
 
     def status_callback(self, msg):
         """주행 상태 업데이트"""

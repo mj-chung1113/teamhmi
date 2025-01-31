@@ -6,12 +6,14 @@ import playsound
 
 class RealTimeTTS:
     def __init__(self):
+        self.test = "unknown"
         # 상태별 출력 문구
         self.output_text = {
+            
             0: ', 이해하지 못했습니다. 다시 말씀해주시겠어요?',
             1: ', 안내사항',
             2: ', botton을 누르고 목적지를 말씀해주세요',
-            3: f', 목적지를 { "목표" }로 설정할까요?',
+            3: f', 목적지를 { self.test }로 설정할까요?',
             4: f', 안내 서비스를 시작합니다. 예상 소요 시간은 약 {10}분 입니다.',
             5: ', 목적지 변경, 현재 위치 확인, 정지, 중 말씀해주세요',
             6: f' 현재 위치는 { "다음 노드" } 의 { 100 } 미터 앞 입니다.',
@@ -40,7 +42,7 @@ class RealTimeTTS:
                 text = self.request_queue.popleft()  # 큐에서 요청 꺼내기
                 self.text_to_speech(text)
 
-    def text_to_speech(self, text, delay=0.5):
+    def text_to_speech(self, text, delay=0.3):
             """텍스트를 음성으로 변환하고 출력, 앞에 임의의 공백 시간(delay)을 추가"""
             try:
                 # 임의의 공백 시간만큼 대기
